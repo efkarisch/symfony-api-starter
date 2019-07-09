@@ -1,0 +1,47 @@
+# PHPstorm
+.DS_Store
+.idea/
+
+# Log exceptions
+!symfony/var/log/.gitkeep
+
+# Parameters
+symfony/app/config/parameters.yml
+symfony/app/config/parameters.ini
+
+# Managed by Composer
+symfony/app/bootstrap.php.cache
+symfony/var/bootstrap.php.cache
+symfony/bin/*
+!symfony/bin/console
+!symfony/bin/symfony_requirements
+symfony/vendor/
+
+# Assets and user uploads
+symfony/web/bundles/
+symfony/web/uploads/
+
+# PHPUnit
+symfony/app/phpunit.xml
+symfony/phpunit.xml
+
+# Build data
+symfony/build/
+
+# Composer PHAR
+symfony/composer.phar
+
+# Backup entities generated with doctrine:generate:entities command
+**/Entity/*~
+
+# Embedded web-server pid file
+symfony/.web-server-pid
+
+###> symfony/framework-bundle ###
+symfony/.env.local
+symfony/.env.local.php
+symfony/.env.*.local
+symfony/public/bundles/
+symfony/var/
+symfony/vendor/
+###< symfony/framework-bundle ###
