@@ -1,2 +1,17 @@
 2019/07/09 21:20:17 [error] 6#6: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.27.0.1, server: symfony.localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.27.0.4:9001", host: "symfony.localhost"
 2019/07/09 21:20:28 [error] 6#6: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.27.0.1, server: symfony.localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.27.0.4:9001", host: "symfony.localhost"
+2019/07/09 22:20:06 [error] 6#6: *24 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Class 'AppBundle\Controller\Controller' not found in /var/www/symfony/src/Controller/HelloController.php on line 8
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/symfony/public/index.php:0
+PHP message: PHP   2. App\Kernel->handle() /var/www/symfony/public/index.php:25
+PHP message: PHP   3. App\Kernel->boot() /var/www/symfony/vendor/symfony/http-kernel/Kernel.php:193
+PHP message: PHP   4. App\Kernel->initializeContainer() /var/www/symfony/vendor/symfony/http-kernel/Kernel.php:133
+PHP message: PHP   5. Symfony\Component\Config\ConfigCache->isFresh() /var/www/symfony/vendor/symfony/http-kernel/Kernel.php:486
+PHP message: PHP   6. Symfony\Component\Config\ConfigCache->isFresh() /var/www/symfony/vendor/symfony/config/ConfigCache.php:60
+PHP message: PHP   7. Symfony\Component\Config\Resource\SelfCheckingResourceChecker->isFresh() /var/www/symfony/vendor/symfony/config/ResourceCheckerConfigCache.php:99
+PHP message: PHP   8. Symfony\Component\Config\Resource\ReflectionClassResource->isFresh() /var/www/symfony/vendor/symfony/config/Resource/SelfCheckingResourceChecker.php:34
+PHP message: PHP   9. Symfony\Component\Config\Resource\ReflectionClassResource->computeHash() /var/www/symfony/vendor/symfony/config/Resource/ReflectionClassResource.php:52
+PHP message: PHP  10. ReflectionClass->__construct() /var/www/symfony/vendor/symfony/config/Resource/ReflectionClassResource.php:105
+PHP message: PHP  11. spl_autoload_call() /var/www/symfony/vendor/symfony/config/Resource/ReflectionClassResource.php:105
+PHP message: PHP  12. Symfony\Component\Debug\DebugClassLoader->loadClass() /var/www/symfony/vendor/symfony/config/Resource/ReflectionClassResource.php:105
+PHP message: PHP  13. require() /var/www/symfony/vendor/symfony/debug/DebugClassLoader.php:160" while reading response header from upstream, client: 172.29.0.1, server: symfony.localhost, request: "GET /ping HTTP/1.1", upstream: "fastcgi://172.29.0.4:9001", host:
